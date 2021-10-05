@@ -1,31 +1,35 @@
 <template>
   <div class="view-links-bio">
-    <center>
-      <v-avatar size="150">
-        <v-img src="../assets/avatar.jpeg"></v-img>
-      </v-avatar>
-        <h4>@Jordan Elizeu</h4>
-        <v-btn class="button-style" block color="#39e09b" elevation="5" large outlined></v-btn>
-        <v-btn class="button-style" block color="#39e09b" elevation="5" large outlined></v-btn>
-        <v-btn class="button-style" block color="#39e09b" elevation="5" large outlined></v-btn>
-    </center>
+      <div v-if="typeUser.is_mobile === true">
+          <ComponentMob/>
+      </div>
+      <div v-else>
+          <ComponentDesktop/>
+      </div>
   </div>
 </template>
 
 <script>
+import ComponentMob from "../components/ComponentMob.vue";
+import ComponentDesktop from "../components/ComponentDesktop.vue";
+
 export default {
   name: "VieLinksBio",
   data() {
     return {
-
+        typeUser:[]
     };
+  },
+  created(){
+      fetch('http://wurfl.io/wurfl.js')
+      .then((resultado) => resultado.json())
+      .then((json) =>  {
+          this.typeUser = json;
+      })
+  },
+  components: {
+     ComponentMob,
+     ComponentDesktop
   },
 };
 </script>
-
-<style scoped>
-.view-links-bio{
-    display: flex;
-    flex-direction: column;
-}
-</style>
