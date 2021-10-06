@@ -1,32 +1,33 @@
 <template>
   <div class="view-links-bio">
     <center>
-      <h1>DESKTOP</h1>
-      <v-avatar size="150">
+      <v-avatar size="120">
         <v-img src="../assets/avatar.jpeg"></v-img>
       </v-avatar>
       <div class="buttons">
         <strong class="titulo">@Jordan Elizeu</strong>
+
         <v-btn class="button-style" color="#39e09b" elevation="5" large>
-          <v-avatar size="27"
-            ><v-img class="iconButton" src="../assets/github.png"
-          /></v-avatar>
-          <b>GitHub</b>
+          <a href="https://github.com/JordanElizeu" target="_blank">
+            <div>
+              <v-avatar size="27"
+                ><v-img class="iconButton" src="../assets/github.png"
+              /></v-avatar>
+              <b class="link">GitHub</b>
+            </div>
+          </a>
         </v-btn>
         <v-btn class="button-style" color="#39e09b" elevation="5" large>
           <v-avatar size="27"
             ><v-img class="iconButton" src="../assets/linkedin.png"
           /></v-avatar>
+          <b class="link">Linkedin</b>
         </v-btn>
-        <v-btn
-          class="button-style"
-          color="#39e09b"
-          elevation="5"
-          large
-        >
+        <v-btn class="button-style" color="#39e09b" elevation="5" large>
           <v-avatar size="27"
             ><v-img class="iconButton" src="../assets/portfolio.png"
           /></v-avatar>
+          <b class="link">Portfolio</b>
         </v-btn>
       </div>
     </center>
@@ -63,5 +64,13 @@ export default {
 }
 .titulo {
   margin-top: 10px;
+}
+.link {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.view-links-bio a {
+  text-decoration: none;
+  text-decoration-color: black;
 }
 </style>
