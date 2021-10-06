@@ -1,6 +1,5 @@
 <template>
   <div class="action-bar">
-    <h1>Olá mundo !!!</h1>
   </div>
 </template>
 
@@ -14,4 +13,7 @@ export default {
 </script>
 
 <style scoped>
+.template{
+  height: 50px;
+}
 </style>
