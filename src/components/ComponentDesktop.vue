@@ -1,34 +1,38 @@
 <template>
   <div class="view-links-bio">
     <center>
-      <v-avatar size="120">
+      <v-avatar size="150">
         <v-img src="../assets/avatar.jpeg"></v-img>
       </v-avatar>
       <div class="buttons">
-        <strong class="titulo">@Jordan Elizeu</strong>
+        <p class="titulo">@Jordan Elizeu</p>
 
-        <v-btn class="button-style" color="#39e09b" elevation="5" large>
-          <a href="https://github.com/JordanElizeu" target="_blank">
+        <a href="https://github.com/JordanElizeu" target="_blank">
+          <v-btn class="button-style" color="#39e09b" elevation="5" large>
             <div>
-              <v-avatar size="27"
-                ><v-img class="iconButton" src="../assets/github.png"
+              <v-avatar class="iconButton" size="27"
+                ><v-img src="../assets/github.png"
               /></v-avatar>
               <b class="link">GitHub</b>
             </div>
-          </a>
-        </v-btn>
-        <v-btn class="button-style" color="#39e09b" elevation="5" large>
-          <v-avatar size="27"
-            ><v-img class="iconButton" src="../assets/linkedin.png"
-          /></v-avatar>
-          <b class="link">Linkedin</b>
-        </v-btn>
-        <v-btn class="button-style" color="#39e09b" elevation="5" large>
-          <v-avatar size="27"
-            ><v-img class="iconButton" src="../assets/portfolio.png"
-          /></v-avatar>
-          <b class="link">Portfolio</b>
-        </v-btn>
+          </v-btn>
+        </a>
+        <a href="https://github.com/JordanElizeu" target="_blank">
+          <v-btn class="button-style" color="#39e09b" elevation="5" large>
+            <v-avatar class="iconButton" size="27"
+              ><v-img src="../assets/linkedin.png"
+            /></v-avatar>
+            <b class="link">Linkedin</b>
+          </v-btn>
+        </a>
+        <a target="_blank">
+          <v-btn class="button-style" color="#39e09b" elevation="5" large>
+            <v-avatar class="iconButton" size="27"
+              ><v-img src="../assets/portfolio.png"
+            /></v-avatar>
+            <b class="link">Portfolio</b>
+          </v-btn>
+        </a>
       </div>
     </center>
   </div>
@@ -51,7 +55,7 @@ export default {
   height: 100vh;
 }
 .button-style {
-  width: 100v;
+  width: 100%;
   margin-left: 400px;
   margin-right: 400px;
   margin-top: 20px;
@@ -64,13 +68,20 @@ export default {
 }
 .titulo {
   margin-top: 10px;
+  font: Sans-serif;
 }
 .link {
   margin-top: 5px;
   margin-left: 10px;
+  font: Sans-serif;
 }
 .view-links-bio a {
   text-decoration: none;
-  text-decoration-color: black;
+  width: 100v;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 </style>
