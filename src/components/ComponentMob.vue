@@ -17,7 +17,7 @@
             </div>
           </v-btn>
         </a>
-        <a href="https://github.com/JordanElizeu" target="_blank">
+        <a href="https://www.linkedin.com/in/jordanelizeu/" target="_blank">
           <v-btn class="button-style" color="#39e09b" elevation="5" large>
             <v-avatar class="iconButton" size="27"
               ><v-img src="../assets/linkedin.png"
